@@ -35,7 +35,7 @@ namespace N1FirstApp
             Console.WriteLine("Square has 4 sides");
         }
     }
-    List<>
+    
     public class Rectangle1 : IRectangle, IShape
     {
         public int Area(int l, int b)
