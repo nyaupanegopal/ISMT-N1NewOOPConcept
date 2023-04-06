@@ -6,24 +6,34 @@ using System.Threading.Tasks;
 
 namespace N1FirstApp
 {
-    internal class CalculatorAbstract
+    internal abstract class CalculatorAbstract
     {
-        public virtual int Sum(int a,int b)
-        {
-            return a + b;
-        }
+        //public abstract int MyProperty { get; set; }
+        //public virtual int Sum(int a,int b)
+        //{
+        //    return a + b;
+        //}
+        public abstract int Sum(int a, int b, int c);
+        
         
     }
     class Test:CalculatorAbstract
     {
-        public override int Sum(int a, int b)
+        public int MyProperty { get; set; }
+        //public override int Sum(int a, int b)
+        //{
+        //    //MyProperty = 10;
+        //    return base.Sum(a,b);
+        //}
+        public override int Sum(int a, int b, int c)
         {
-            return a+2*b;
+            return a + b + c;
         }
         public static void Main()
         {
             CalculatorAbstract t = new Test();
-            var result=t.Sum(1,2);
+            
+            var result=t.Sum(1,2,3);
             Console.WriteLine(result);
         }
         
